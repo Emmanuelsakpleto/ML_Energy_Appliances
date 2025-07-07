@@ -30,7 +30,7 @@ st.markdown("""
     body {
         background-color: var(--background-color);
     }
-    
+
     /* --- Sidebar --- */
     section[data-testid="stSidebar"] {
         background-color: var(--secondary-background-color);
@@ -56,7 +56,7 @@ st.markdown("""
         margin-bottom: 0.5em;
         text-align: center;
     }
-    
+
     /* --- Accueil Page Specific --- */
     .gradient-title {
         font-size: 3.2em;
@@ -105,7 +105,7 @@ st.markdown("""
         font-size: 1em;
         color: #333 !important;
     }
-    
+
     /* --- Introduction Box --- */
     .intro-box {
         background-color: var(--secondary-background-color);
@@ -123,7 +123,7 @@ st.markdown("""
     .intro-box p {
         line-height: 1.6;
     }
-    
+
     /* --- Conclusion Box --- */
     .conclusion-box {
         background-color: var(--secondary-background-color);
@@ -148,7 +148,7 @@ st.markdown("""
         margin-bottom: 0.5em;
         line-height: 1.6;
     }
-    
+
     /* --- Page Headers --- */
     .page-header {
         font-size: 2.2em;
@@ -157,6 +157,33 @@ st.markdown("""
         border-bottom: 3px solid #0072ff;
         padding-bottom: 0.3em;
         margin-bottom: 1em;
+    }
+
+    /* --- Responsive: mobile adaptation --- */
+    @media (max-width: 600px) {
+        .gradient-title {
+            font-size: 2em;
+        }
+        .slogan-box {
+            font-size: 1em;
+            padding: 0.7em 0.5em;
+        }
+        .feature-card {
+            padding: 0.7em;
+            margin: 0.2em;
+        }
+        .feature-title {
+            font-size: 1em;
+        }
+        .feature-icon {
+            font-size: 1.5em;
+        }
+        .intro-box, .conclusion-box {
+            padding: 0.7em 0.5em;
+        }
+        .page-header {
+            font-size: 1.3em;
+        }
     }
     </style>
 """, unsafe_allow_html=True)
