@@ -34,27 +34,66 @@ st.markdown("""
     /* --- Sidebar --- */
     section[data-testid="stSidebar"] {
         background-color: var(--secondary-background-color);
+        min-width: 220px;
+        max-width: 320px;
+        padding-left: 0.5em !important;
+        padding-right: 0.5em !important;
+        overflow-y: auto;
     }
     .sidebar-logo {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 1em;
+        margin-bottom: 0.7em;
     }
     .sidebar-logo img {
-        width: 60px;
+        width: 48px;
         border-radius: 50%;
         box-shadow: 0 2px 12px #00c6ff44;
         border: 2px solid #00c6ff;
     }
     .sidebar-title {
-        font-size: 1.7em;
+        font-size: 1.2em;
         font-weight: bold;
         background: linear-gradient(90deg, #00c6ff, #0072ff, #00c6ff);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 0.5em;
+        margin-bottom: 0.3em;
         text-align: center;
+        letter-spacing: 0.5px;
+    }
+    /* Menu radio plus compact */
+    [data-testid="stSidebar"] .stRadio > div {
+        gap: 0.2em !important;
+    }
+    [data-testid="stSidebar"] label {
+        font-size: 1em !important;
+        padding: 0.2em 0.1em !important;
+    }
+    /* Scroll si déborde */
+    [data-testid="stSidebar"] {
+        overflow-y: auto;
+        max-height: 100vh;
+    }
+
+    /* Responsive sidebar sur mobile */
+    @media (max-width: 600px) {
+        section[data-testid="stSidebar"] {
+            min-width: 100px;
+            max-width: 140px;
+            padding-left: 0.1em !important;
+            padding-right: 0.1em !important;
+        }
+        .sidebar-logo img {
+            width: 32px;
+        }
+        .sidebar-title {
+            font-size: 0.9em;
+            margin-bottom: 0.1em;
+        }
+        [data-testid="stSidebar"] label {
+            font-size: 0.85em !important;
+        }
     }
 
     /* --- Accueil Page Specific --- */
